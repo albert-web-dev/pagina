@@ -1,0 +1,345 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:  #f1f1f2;
+    font-family: 'Raleway', sans-serif;
+}
+body::-webkit-scrollbar{
+    width: 15px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #1995ad;
+    border-radius: 15px;
+}
+/*............................menu-------------------------------*/
+.menu{
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.menu_menu{
+    position: fixed;
+    width: 100%;
+    height: 12vh;
+    background: rgba(241, 241, 242, 0.97);
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+}
+.menu_containerLogo,
+.menu__containerLinks{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.menu_containerLogo{
+    width: 20%;
+    background-color: #1995ad;
+}
+.menu__logo{
+    color: #f1f1f2;
+}
+
+.menu__containerLinks{
+    width: 50%;
+    
+}
+.menu__link{
+    text-decoration: none;
+    color: #1995ad;
+}
+
+
+.texto{
+    position: absolute;
+    width: 50%;
+    height: 30vh;
+    top: 30%;
+    left: 30%;
+}
+.texto > p{
+    font-size: 55px;
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+/*............................video top inicio-------------------------------*/
+.video{
+    position: relative;
+    width: 100%;
+    height: 78vh;
+    z-index: -2;
+}
+.video__mp4{
+    position: fixed;
+    width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -2;
+}
+
+/*............................MAIN-------------------------------*/
+.Container{
+    width: 100%;
+    height: 100vh;
+}
+
+/*...........Servicios-----------*/
+.container__servicios{
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+}
+.servicios{
+    margin-top: 12vh;
+    margin-left: 15%;
+    width: 70%;
+    min-height: 100vh;
+    display: grid;
+    grid-gap: 3%;
+    grid-template-columns: repeat(3, 31.3%);
+    grid-template-rows: 15vh 75vh;
+    grid-template-areas: "servicios__titulo             servicios__titulo           servicios__titulo"
+                         "servicios__planeamiento       servicios__maquetas         servicios__construccion";
+}
+.servicios__titulo{
+    grid-area: servicios__titulo;   
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.servicios__planeamiento{
+    grid-area: servicios__planeamiento;
+}
+.servicios__maquetas{
+    grid-area: servicios__maquetas
+}
+.servicios__construccion{
+    grid-area: servicios__construccion;
+}
+
+.servicios__planeamiento,
+.servicios__maquetas,
+.servicios__construccion{
+    font-family: 'Roboto Condensed', sans-serif;
+    background:#bcbabe;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.servicios__containerImg{
+    width: 100%;
+}
+.servicios__img{
+    width: 100%;
+    height: 40vh;
+}
+
+.servicios__containerDescription{
+    padding: 20px;
+    text-align: justify;
+}
+
+
+/*...........Nosotros-----------*/
+.nosotros{
+    width: 100%;
+    height: 85vh;
+    background-image: url(../assets/images/back-1.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-size: cover;
+}
+.nosotros__container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 15% 35% 50%;
+    grid-template-rows: 25vh 60vh;
+    grid-template-areas: "nosotros__nada1       nosotros__containerTitle        nosotros__nada"
+                         "nosotros__nada1       nosotros__containerTexto        nosotros__nada";
+}
+.nosotros__nada1{
+    background-color: #bcbabe;
+    
+    grid-area: nosotros__nada1;
+}
+.nosotros__containerTitle{
+    background-color: #bcbabe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    grid-area: nosotros__containerTitle;
+}
+.nosotros__containerTexto{
+    background-color:#bcbabe;
+    
+    grid-area: nosotros__containerTexto;
+}
+.nosotros__nada{
+    opacity: 0;
+    
+    grid-area: nosotros__nada;
+}
+
+.nosotros__txt{
+    padding-right: 50px;
+    font-size: 21px;
+}
+
+
+/*...........Proyectos-----------*/
+.proyectos{
+    width: 100%;
+    min-height: 180vh;
+    background-color: #ffffff;
+}
+.container__proyectos{
+    width: 75%;
+    height: 100%;
+    margin-left: 15%;
+    display: grid;
+    grid-gap: 10%;
+    grid-template-columns: repeat(2, 41.7%);
+    grid-template-rows: 15vh repeat(2, 40vh) 25vh;
+    grid-template-areas: "proyectos__titulo         proyectos__titulo"
+                         "protectos__proyecto1      protectos__proyecto2"
+                         "protectos__proyecto3      protectos__proyecto4"
+                         "protectos__proyecto5      protectos__proyecto5";
+}
+.proyectos__titulo{
+    grid-area: proyectos__titulo;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.protectos__proyecto1{
+    grid-area: protectos__proyecto1;
+}
+.protectos__proyecto2{
+    grid-area: protectos__proyecto2;
+}
+.protectos__proyecto3{
+    grid-area: protectos__proyecto3;
+}
+.protectos__proyecto4{
+    grid-area: protectos__proyecto4;
+}
+.protectos__proyecto5{
+    grid-area: protectos__proyecto5;
+}
+
+.protectos__proyecto1,
+.protectos__proyecto2,
+.protectos__proyecto3,
+.protectos__proyecto4,
+.protectos__proyecto5{
+    width: 100%;
+    height: 100%;
+}
+.proyectos__img{
+    width: 100%;
+}
+
+.proyectos__img:hover{
+    cursor: pointer;
+}
+/*...........Contacto-----------*/
+.contacto{
+    width: 100%;
+    height: 124vh;
+    background-color: #ffffff;
+}
+.contacto__container{
+    width: 75%;
+    height: 100%;
+    margin-left: 15%;
+    display: grid;
+    grid-gap: 5%;
+    grid-template-columns: repeat(2, 45%);
+    grid-template-rows: 15vh repeat(3, 30vh);
+    grid-template-areas: "contacto__titulo     contacto__titulo"
+                         "contacto__form       contacto__oficina"
+                         "contacto__form       contacto__empleos"
+                         "contacto__form       contactos__preguntas";
+}
+.contacto__titulo{
+    grid-area: contacto__titulo;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contacto__form{
+    grid-area: contacto__form;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.contacto__oficina{
+    grid-area: contacto__oficina;
+}
+.contacto__empleos{
+    grid-area: contacto__empleos;
+}
+.contactos__preguntas{
+    grid-area: contactos__preguntas;
+}
+
+.contacto__titulo
+.contacto__form,
+.contacto__oficina,
+.contacto__empleos,
+.contactos__preguntas{
+    width: 100%;
+    height: 100%;
+}
+
+.contacto__inpTxt{
+    height: 10vh;
+}
+.contacto__inpTxt,
+.contacto__txtArea{
+    width: 100%;
+    padding: 15px;
+    font-size: 13px;
+    border-radius: 10px;
+}
+.contacto__inpSubmit{
+    width: 50%;
+    height: 10vh;
+    padding: 15px;
+    font-size: 13px;
+    border-radius: 10px;
+}
+
+.footer{
+    width: 100%;
+    height: 20vh;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+.footer > p{
+    margin-left: 15%;
+}
+
+.separador{
+    width: 100%;
+    height: 10vh;
+    background-color: #ffffff;
+}
